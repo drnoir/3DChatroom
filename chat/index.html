@@ -7,10 +7,10 @@
 
       #chatInput {
           padding:1em;
-          min-width:480px;
+          min-width:780px;
           height: auto;
           bottom:290px;
-          left:300;
+          left:0;
           position: fixed;
           z-index: 10;
         }
@@ -24,7 +24,7 @@
         #chatUI {
           width: 750px;
           padding:1em;
-          height: 250px;
+          height: 200px;
           bottom:0;
           left:0;
           position: fixed;
@@ -129,7 +129,7 @@
     -->
     <button
       id="color-changer"
-      style="z-index: 100; bottom: 300px; left: 24px; position: fixed"
+      style="z-index: 100; bottom: 350px; left: 24px; position: fixed"
       onclick="let newColor = window.ntExample.randomColor();
              document.getElementById('player').setAttribute('player-info', 'color', newColor); 
              document.querySelector('button').style.backgroundColor = newColor;
@@ -140,7 +140,7 @@
     </button>
     <input
       id="username-overlay"
-      style="z-index: 100; bottom: 300px; left: 48px; position: fixed"
+      style="z-index: 100; bottom: 350px; left: 48px; position: fixed"
       oninput="document.getElementById('player').setAttribute('player-info', 'name', this.value)"
     />
     <div id="chatSubmit">
