@@ -142,7 +142,7 @@
     -->
     <button
       id="color-changer"
-      style="z-index: 100; bottom: 350px; left: 24px; position: fixed"
+      style="z-index: 100; bottom: 325px; left: 10px; position: fixed"
       onclick="let newColor = window.ntExample.randomColor();
              document.getElementById('player').setAttribute('player-info', 'color', newColor); 
              document.querySelector('button').style.backgroundColor = newColor;
@@ -153,7 +153,7 @@
     </button>
     <input
       id="username-overlay"
-      style="z-index: 100; bottom: 350px; left: 48px; position: fixed"
+      style="z-index: 100; bottom: 325px; left: 48px; position: fixed"
       oninput="document.getElementById('player').setAttribute('player-info', 'name', this.value)"
     />
     <div id="chatSubmit">
