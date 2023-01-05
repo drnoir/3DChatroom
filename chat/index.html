@@ -6,7 +6,6 @@
     <style>
 
       #chatInput {
-        
           padding:1em;
           min-width:480px;
           height: auto;
@@ -15,6 +14,12 @@
           position: fixed;
           z-index: 10;
         }
+
+        #chatButton{
+          position: fixed;
+          left:725px;
+          bottom:350px;
+          z-index:10;        }
 
         #chatUI {
           width: 750px;
@@ -29,6 +34,8 @@
           overflow:scroll;
           border:black 1px solid;
         }
+
+        
       </style>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.5.0/socket.io.slim.js"></script>
@@ -143,7 +150,7 @@
     <!-- chat Window UI -->
     <div id="chatUI">
       <h4>Blob Chat 3D - Free 3D Chat Client</h4>
-            <div id="messages"></div>
+        <div id="messages"></div>
     </div>
 
     <a-scene
