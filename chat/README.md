@@ -1,0 +1,1 @@
+Experimental implementation of a chat client for Networked A-Frame
