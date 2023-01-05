@@ -4,6 +4,18 @@
     <title>3D Chatroom</title>
     <meta name="description" content="Tracked Controllers — Networked-Aframe" />
     <style>
+
+      #chatInput {
+        
+          padding:1em;
+          min-width:480px;
+          height: auto;
+          bottom:290px;
+          left:300;
+          position: fixed;
+          z-index: 10;
+        }
+
         #chatUI {
           width: 750px;
           padding:1em;
@@ -13,8 +25,8 @@
           position: fixed;
           z-index: 10;
           background-color: whitesmoke;
-          opacity: 0.8;
-          overflow: auto;
+          opacity: 0.9;
+          overflow:scroll;
           border:black 1px solid;
         }
       </style>
@@ -124,13 +136,14 @@
       style="z-index: 100; bottom: 300px; left: 48px; position: fixed"
       oninput="document.getElementById('player').setAttribute('player-info', 'name', this.value)"
     />
-
+    <div id="chatSubmit">
+      <input type="text" id = "chatInput">
+      <button id ="chatButton">SEND</button>
+    </div>
     <!-- chat Window UI -->
     <div id="chatUI">
       <h4>Blob Chat 3D - Free 3D Chat Client</h4>
-        <input type="text" id = "chatInput">
-        <button id ="chatButton">SEND</button>
-        <div id="messages"></div>
+            <div id="messages"></div>
     </div>
 
     <a-scene
@@ -205,6 +218,7 @@
           })
 
           txt: input.value = '';
+          messages.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
 
         document.addEventListener('keypress', function (e) {
